@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+.login__form{
+    background: "/assets/background.jpg";
+    margin: 100px;
+    width:400px;
+    height: 400px;
+    background-color:rgba(255,255,255,0.1);
+    border-radius:5px ;
+    backdrop-filter: blur(30px);
+    padding: 10px;
+    border: 2px solid transparent;
+    box-shadow: 10px 10px 10px rgba(45,55,68,0.40);
+}
+
+.login_header{
+    text-align: center;
+    color: whitesmoke;
+    
+}
+
+.login__Form__content{
+    text-align: center;
+    color: whitesmoke;    
+}
+
+.login__Form>h1{
+    padding: 15px;
+}
+
+.login__FormInputs{
+  display: block;
+  width: 350px;
+  height: 40px;
+  margin: 10px ;
+  border: none;
+  font-size: 15px;
+  outline: none;
+  border-bottom: 1px solid whitesmoke;
+  background: transparent;
+  color: whitesmoke;
+}
+
+.login__FormButton{
+    background-color: rgb(41, 41, 131);
+    border: none;
+    width: 350px;
+    height: 40px;  
+    margin-bottom: 30px; 
+    color: whitesmoke; 
+}
+
+.login__Formlogintag{
+    color: whitesmoke;
+}
+
+.login__Formlogintag>button{
+    background: none;
+    border: none;
+    color: aquamarine;
+    font-size: 17px;
+    font-family: 'Josefin Sans', sans-serif;
+    }
+
+
