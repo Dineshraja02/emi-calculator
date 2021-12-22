@@ -2,7 +2,7 @@ import {useState, useEffect} from 'react';
 import emicalc from './emicalc';
 import axios from 'axios';
 
-const API_URL='http://localhost:3001/data/history';
+const API_URL='https://emi-calcu.herokuapp.com/data/history';
 const useEmicalcform = (validateValues) => {
    
     const [values,setValues] = useState({

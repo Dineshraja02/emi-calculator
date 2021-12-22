@@ -6,13 +6,12 @@ import axios from 'axios';
 import useEmicalcform from "./useEmicalcform";
 
 
-
 const Emi = () => {
     
     const [info,setInfo]=useState([]);
     const getInfo= async () =>{
         try{
-          const res = await axios.get('http://localhost:3001/data/searchHistory',
+          const res = await axios.get('https://emi-calcu.herokuapp.com/data/searchHistory',
           {headers:
               {'auth':`${sessionStorage.getItem('auth')}`}});
               setInfo(res.data);
@@ -70,7 +69,6 @@ const Emi = () => {
                 <th>loanAmount</th>
                 <th>Interest</th>
                 <th>Month</th>
-                <th>View Details</th>
                 </tr>
                 {info.map((data,index)=>{
                  return(
