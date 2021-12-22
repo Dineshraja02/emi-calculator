@@ -25,7 +25,6 @@ const Emi = () => {
 
 
     const {values,handleChange,handleSubmit,errors,emiDetails,viewDetails}=useEmicalcform(validateValues);
-
     return (
        <div className="emiPage" >
            <div className="navbar">
@@ -62,6 +61,10 @@ const Emi = () => {
                 className="emiPage_SubmitButton" 
                 type="submit">Calculate</button>
             <div className="searchHistory">
+            {(()=>{
+               if(info.length !==0) {
+                return(               
+                <>     
                <h4>Recent Searches</h4>
                <table className="emi_Table">
                 <tr className="table_Header">
@@ -83,10 +86,20 @@ const Emi = () => {
                 </>
                  )})}
                 </table>
+                </>
+)}})()}
            </div>
            </form>
            <div className="emiDetails">
+               {(()=>{
+               if(emiDetails.length !==0) {
+                return(               
+                <>   
                <h2 className="emiDetail_Heading"><b>EMI Details</b></h2>
+               <p>Loan Amount:{emiDetails[0].loanAmount}</p>
+               <p>Total Interest: {emiDetails[0].totalInterest}</p>
+               <p>Total Payment : {emiDetails[0].totalPayment}</p>
+               <p>EMI :{emiDetails[0].emiPerMonth}</p>
                <table className="emi_Table">
                 <tr className="table_Header">
                 <th>Month</th>
@@ -104,6 +117,8 @@ const Emi = () => {
                 </tr>
                  )})}
                 </table>
+                </>
+)}})()}
            </div>
            </div>
        </div>
