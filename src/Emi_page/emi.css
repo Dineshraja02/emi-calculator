@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
+.emiPage{
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.navbar{
+    width: 100vw;
+    height: 33px;
+    background-color: crimson;
+    position: sticky;
+    top: 0;
+}
+
+.emiPage_Container{
+    display: flex;
+    height: 95vh;
+}
+
+.emiPage_Form{
+    flex: 3;
+    background-color: whitesmoke;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    margin: 10px;
+    align-items: center;
+}
+
+
+
+.emipage_Inputs{
+    text-decoration: none;
+    border: none;
+    padding: 10px;
+    border-bottom: 1px solid black ;
+    margin: 10px 4px;
+    outline: none;
+    background-color: whitesmoke;
+    width: 90%;
+}
+
+.emipage_Inputs::-webkit-outer-spin-button,
+.emipage_Inputs::-webkit-inner-spin-button{
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.emiPage_SubmitButton{
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.emiDetails{
+    flex:9;
+    background-color: whitesmoke;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    margin: 10px;
+}
+
+.emiDetail_Heading{
+    margin: 10px;
+}
+
