@@ -10,6 +10,7 @@ export default function emicalc(values){
     totalPayment = totalPayment.toFixed(2);
     let totalInterest = totalPayment-loanAmount;
     totalInterest = totalInterest.toFixed(2)
+    console.log(totalInterest)
     let balance = parseInt(loanAmount) 
     for(let i=0;i<month;i++){
         let monthInterestAmount = (balance*monthInterest);
