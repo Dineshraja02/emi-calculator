@@ -11,7 +11,7 @@ const LoginForm = (props) => {
         <div className= "login__form">
             <div className="login__Form__content">
                 <form className="login__Form" onSubmit={handleSubmit}>
-                <h1 className="login_header">PORTFOLIO CREATER</h1> 
+                <h1 className="login_header">EMI CALCULATOR</h1> 
                     <h1>login</h1>
                     <div className="login__FormInputs">
                             <input 

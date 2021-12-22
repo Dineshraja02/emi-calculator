@@ -2,7 +2,7 @@ import {useState, useEffect} from 'react';
 import axios from 'axios';
 import {toast} from "react-toastify";
 
-const API_URL="https://portfoliocreater-backend.herokuapp.com/api/register";
+const API_URL="http://localhost:3001/api/register";
 const useForm = (validate,props) => {
     const [values,setValues] = useState({
         name:"",
@@ -24,7 +24,7 @@ const handleChange= e =>{
     };
 const handleSubmit=async(e)=>{
     e.preventDefault();
-    await setErrors( await validate(values));
+    setErrors( await validate(values));
     setSubmit(true);
     
 }
@@ -37,7 +37,7 @@ useEffect(() => {
       
     })
     .then(res=>{
-        props.history.push('/portfolioForm');
+        props.history.push('/login');
         console.log(res.data)
     })
     .catch(err =>{

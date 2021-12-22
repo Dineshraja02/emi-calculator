@@ -2,7 +2,7 @@ import {useState,useEffect} from 'react';
 import axios from 'axios';
 import {toast} from "react-toastify";
 
-const API_URL='https://portfoliocreater-backend.herokuapp.com/api/login';
+const API_URL='http://localhost:3001/api/login';
 const useLoginForm = (validate,props) => {
    
     const [values,setValues] = useState({
@@ -34,8 +34,8 @@ useEffect(() => {
         password:values.password
     })
     .then(res=>{
-        localStorage.setItem('auth',JSON.stringify(res.data))
-        props.history.push('/portfolioForm');
+        sessionStorage.setItem('auth',JSON.stringify(res.data))
+        // props.history.push('/portfolioForm');
 
     })
     .catch(err =>{

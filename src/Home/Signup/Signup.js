@@ -10,7 +10,7 @@ const SignUp = (props) => {
         <div className= "signup__form">
             <div className="signup__Form__content">
                 <form className="signup__Form" onSubmit={handleSubmit}>
-                <h1 className="signup_header">PORTFOLIO CREATER</h1> 
+                <h1 className="signup_header">EMI CALCULATOR</h1> 
                     <h1>SignUp</h1>
                     <div className="signup__FormInputs">
                             <input 
