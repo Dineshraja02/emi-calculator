@@ -28,13 +28,13 @@
 
 .signup_header{
     text-align: center;
-    color: whitesmoke;
+    color: black;
     
 }
 
 .signup__Form__content{
     text-align: center;
-    color: whitesmoke;    
+    color: black;    
 }
 
 .signup__Form>h1{
@@ -49,9 +49,9 @@
   border: none;
   font-size: 15px;
   outline: none;
-  border-bottom: 1px solid whitesmoke;
+  border-bottom: 1px solid black;
   background: transparent;
-  color: whitesmoke;
+  color: black;
 }
 
 .signup__FormButton{
@@ -60,17 +60,17 @@
     width: 350px;
     height: 40px;  
     margin-bottom: 30px; 
-    color: whitesmoke; 
+    color: black; 
 }
 
 .signup__Formlogintag{
-    color: whitesmoke;
+    color: black;
 }
 
 .signup__Formlogintag>button{
     background: none;
     border: none;
-    color: aquamarine;
+    color: crimson;
     font-family: 'Josefin Sans', sans-serif;
     font-size: 15px;
 }

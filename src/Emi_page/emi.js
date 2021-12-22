@@ -66,8 +66,8 @@ const Emi = () => {
                 return(               
                 <>     
                <h4>Recent Searches</h4>
-               <table className="emi_Table">
-                <tr className="table_Header">
+               <table className="search_Table">
+                <tr className="search_TableHeader">
                 <th>S.No</th>
                 <th>loanAmount</th>
                 <th>Interest</th>
@@ -76,13 +76,13 @@ const Emi = () => {
                 {info.map((data,index)=>{
                  return(
                 <>
-                <tr key={index} className="table-Content">
+                <tr key={index} className="searchTable-Content">
                 <th>{index+1}</th>
                 <th>{data.loanAmount}</th>
                 <th>{data.interest}</th>
                 <th>{data.month}</th>
                 </tr>
-                <button onClick={()=>viewDetails(info[index])}>View details</button>
+                <button className='searchButton' onClick={()=>viewDetails(info[index])}>View details</button>
                 </>
                  )})}
                 </table>
