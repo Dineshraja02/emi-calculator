@@ -1,11 +1,32 @@
+import {useState, useEffect} from 'react';
 import "./emi.css";
 import React from 'react'
-import validateValues from "./validateValues"
+import validateValues from "./validateValues";
+import axios from 'axios';
 import useEmicalcform from "./useEmicalcform";
 
 
+
 const Emi = () => {
-    const {values,handleChange,handleSubmit,errors,emiDetails}=useEmicalcform(validateValues);
+    
+    const [info,setInfo]=useState([]);
+    const getInfo= async () =>{
+        try{
+          const res = await axios.get('http://localhost:3001/data/searchHistory',
+          {headers:
+              {'auth':`${sessionStorage.getItem('auth')}`}});
+              setInfo(res.data);
+        }catch(err){
+             console.log(err);
+        }
+    }
+       useEffect(()=>{
+      getInfo();
+    },[])// eslint-disable-line react-hooks/exhaustive-deps
+
+
+    const {values,handleChange,handleSubmit,errors,emiDetails,viewDetails}=useEmicalcform(validateValues);
+
     return (
        <div className="emiPage" >
            <div className="navbar">
@@ -41,9 +62,33 @@ const Emi = () => {
                 <button 
                 className="emiPage_SubmitButton" 
                 type="submit">Calculate</button>
+            <div className="searchHistory">
+               <h4>Recent Searches</h4>
+               <table className="emi_Table">
+                <tr className="table_Header">
+                <th>S.No</th>
+                <th>loanAmount</th>
+                <th>Interest</th>
+                <th>Month</th>
+                <th>View Details</th>
+                </tr>
+                {info.map((data,index)=>{
+                 return(
+                <>
+                <tr key={index} className="table-Content">
+                <th>{index+1}</th>
+                <th>{data.loanAmount}</th>
+                <th>{data.interest}</th>
+                <th>{data.month}</th>
+                </tr>
+                <button onClick={()=>viewDetails(info[index])}>View details</button>
+                </>
+                 )})}
+                </table>
+           </div>
            </form>
            <div className="emiDetails">
-               <h3 className="emiDetail_Heading">EMI Details</h3>
+               <h2 className="emiDetail_Heading"><b>EMI Details</b></h2>
                <table className="emi_Table">
                 <tr className="table_Header">
                 <th>Month</th>
@@ -53,7 +98,7 @@ const Emi = () => {
                 </tr>
                 {emiDetails.map((emi,index)=>{
                  return(
-                <tr key={index}>
+                <tr key={index} className="table-Content">
                 <th>{index+1}</th>
                 <th>{emi.principal}</th>
                 <th>{emi.monthInterestAmount}</th>

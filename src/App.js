@@ -1,7 +1,7 @@
 import React from 'react';
 import Signup from "./Home/Signup/Signup";
 import LoginForm from './Home/login/LoginForm';
-import {BrowserRouter,Switch,Route} from "react-router-dom";
+import {BrowserRouter,Switch,Route, Redirect} from "react-router-dom";
 import {ToastContainer} from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import './App.css';
@@ -12,9 +12,12 @@ const App = () => {
   <>
    <BrowserRouter>
     <Switch>
-      <Route path="/" exact component={Emi} />
+      <Route path="/" exact component={LoginForm} />
       <Route path="/Login" exact component={LoginForm}/>
       <Route path="/Register" exact component={Signup}/>
+      <Route path="/emicalc" render ={(props)=>{
+        let hasToken=JSON.parse(sessionStorage.getItem('auth'))
+        return hasToken  !==null? <Emi {...props}/> : <Redirect to="/login" /> }}/>
     </Switch>   
    </BrowserRouter>
     <ToastContainer />

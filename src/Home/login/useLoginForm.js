@@ -35,7 +35,7 @@ useEffect(() => {
     })
     .then(res=>{
         sessionStorage.setItem('auth',JSON.stringify(res.data))
-        // props.history.push('/portfolioForm');
+        props.history.push('/emicalc');
 
     })
     .catch(err =>{

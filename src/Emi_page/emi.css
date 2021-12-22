@@ -12,13 +12,17 @@
     top: 0;
 }
 
+.navbar>h2{
+    color: whitesmoke;
+    margin-left: 20px;
+}
+
 .emiPage_Container{
     display: flex;
-    height: 95vh;
 }
 
 .emiPage_Form{
-    flex: 3;
+    flex: 4;
     background-color: whitesmoke;
     padding: 10px;
     display: flex;
@@ -28,6 +32,9 @@
     align-items: center;
 }
 
+.searchHistory{
+   margin: 10px;
+}
 
 
 .emipage_Inputs{
@@ -53,13 +60,36 @@
 }
 
 .emiDetails{
-    flex:9;
+    flex:8;
+    display: flex;
+    flex-direction: column;
     background-color: whitesmoke;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     margin: 10px;
+    align-items: center;
+    justify-content: center;
 }
 
 .emiDetail_Heading{
-    margin: 10px;
+    margin-top: 10px;
+}
+
+.emi_Table{
+    width: 80%;
+    height: 80%;
+    margin: 20px;
+}
+
+.table_Header{
+    background-color: crimson;
+    color: whitesmoke;
+}
+
+.table_Header >th{
+    border: 1px solid black;
+}
+
+.table-Content>th{
+    border: 1px solid black;
 }
 

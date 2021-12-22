@@ -2,8 +2,8 @@ export default function validateValues(values){
     let errors={}
     if(!values.loanAmount){
         errors.loanAmount="Enter the Loan Amount"
-    }else if(values.loanAmount==0){
-        errors.loanAmount = "Enter Non Decimal Value"
+    }else if(values.loanAmount<100){
+        errors.loanAmount = "Enter greater than 100"
     }
 
     if(!values.interest){
@@ -12,7 +12,7 @@ export default function validateValues(values){
 
     if(!values.month){
         errors.month="Enter the period"
-    }else if((values.month)== 0){
+    }else if((values.month)===0){
         errors.month = "Enter Non Decimal Value"
     }
 
